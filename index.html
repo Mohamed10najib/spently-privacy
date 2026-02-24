@@ -2,31 +2,221 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Spently - سياسة الخصوصية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spently - Privacy Policy</title>
   <style>
-    body { font-family: Arial; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.8; }
-    h1 { color: #1a7a6e; }
-    h2 { color: #333; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f5f9f8; color: #333; }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px;
+      background: #1a7a6e;
+    }
+    .lang-switcher button {
+      padding: 8px 20px;
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: all 0.2s;
+    }
+    .lang-switcher button.active, .lang-switcher button:hover {
+      background: white;
+      color: #1a7a6e;
+    }
+
+    .header {
+      background: #1a7a6e;
+      color: white;
+      text-align: center;
+      padding: 30px 20px 40px;
+    }
+    .header .logo { font-size: 48px; margin-bottom: 10px; }
+    .header h1 { font-size: 26px; }
+    .header p { opacity: 0.85; margin-top: 6px; font-size: 14px; }
+
+    .container {
+      max-width: 800px;
+      margin: -20px auto 40px;
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .section { margin-bottom: 30px; }
+    .section h2 {
+      color: #1a7a6e;
+      font-size: 18px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e8f4f3;
+    }
+    .section p { line-height: 1.9; font-size: 15px; color: #555; }
+
+    .badge {
+      display: inline-block;
+      background: #e8f4f3;
+      color: #1a7a6e;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    /* RTL for Arabic */
+    .content-ar { direction: rtl; text-align: right; }
+    /* LTR for French and English */
+    .content-fr, .content-en { direction: ltr; text-align: left; }
+
+    .content-fr, .content-en, .content-ar { display: none; }
+    .content-ar.active, .content-fr.active, .content-en.active { display: block; }
   </style>
 </head>
 <body>
-  <h1>سياسة الخصوصية – Spently</h1>
-  <p>آخر تحديث: فبراير 2026</p>
 
-  <h2>1. جمع البيانات</h2>
-  <p>تطبيق Spently لا يجمع أي بيانات شخصية. جميع البيانات (المصاريف، الميزانية، القروض) تُخزَّن محلياً على جهازك فقط ولا تُرسل إلى أي خادم.</p>
+  <div class="lang-switcher">
+    <button onclick="setLang('ar')" id="btn-ar" class="active">العربية</button>
+    <button onclick="setLang('fr')" id="btn-fr">Français</button>
+    <button onclick="setLang('en')" id="btn-en">English</button>
+  </div>
 
-  <h2>2. استخدام البيانات</h2>
-  <p>البيانات التي تدخلها في التطبيق تُستخدم فقط لعرض إحصاءاتك ومصاريفك داخل التطبيق. لا نشارك بياناتك مع أي طرف ثالث.</p>
+  <div class="header">
+    <div class="logo">💰</div>
+    <h1 id="header-title">سياسة الخصوصية</h1>
+    <p id="header-sub">Spently – آخر تحديث: فبراير 2026</p>
+  </div>
 
-  <h2>3. الأذونات</h2>
-  <p>التطبيق لا يطلب أي أذونات حساسة مثل الموقع أو الكاميرا أو جهات الاتصال.</p>
+  <div class="container">
 
-  <h2>4. الأمان</h2>
-  <p>بما أن جميع البيانات محلية على جهازك، فأنت المسؤول الوحيد عن حمايتها.</p>
+    <!-- ARABIC -->
+    <div class="content-ar active">
+      <span class="badge">🇲🇦 العربية</span>
+      <div class="section">
+        <h2>1. جمع البيانات</h2>
+        <p>تطبيق Spently لا يجمع أي بيانات شخصية. جميع البيانات (المصاريف، الميزانية، القروض) تُخزَّن محلياً على جهازك فقط ولا تُرسل إلى أي خادم خارجي.</p>
+      </div>
+      <div class="section">
+        <h2>2. استخدام البيانات</h2>
+        <p>البيانات التي تدخلها في التطبيق تُستخدم فقط لعرض إحصاءاتك ومصاريفك داخل التطبيق. لا نشارك بياناتك مع أي طرف ثالث تحت أي ظرف.</p>
+      </div>
+      <div class="section">
+        <h2>3. الأذونات</h2>
+        <p>التطبيق لا يطلب أي أذونات حساسة مثل الموقع الجغرافي أو الكاميرا أو جهات الاتصال أو الميكروفون.</p>
+      </div>
+      <div class="section">
+        <h2>4. الأمان</h2>
+        <p>بما أن جميع البيانات مخزنة محلياً على جهازك، فأنت المسؤول الوحيد عن حمايتها. ننصحك بتفعيل قفل الشاشة على جهازك.</p>
+      </div>
+      <div class="section">
+        <h2>5. التحديثات</h2>
+        <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم إخطارك بأي تغييرات عبر التطبيق.</p>
+      </div>
+      <div class="section">
+        <h2>6. تواصل معنا</h2>
+        <p>لأي استفسار بخصوص الخصوصية، تواصل معنا عبر: <a href="mailto:contact@spently.app" style="color:#1a7a6e;">contact@spently.app</a></p>
+      </div>
+    </div>
 
-  <hr>
-  <p><strong>Politique de Confidentialité – Spently</strong></p>
-  <p>Spently ne collecte aucune donnée personnelle. Toutes les données sont stockées localement sur votre appareil et ne sont jamais partagées avec des tiers.</p>
+    <!-- FRENCH -->
+    <div class="content-fr">
+      <span class="badge">🇫🇷 Français</span>
+      <div class="section">
+        <h2>1. Collecte des données</h2>
+        <p>Spently ne collecte aucune donnée personnelle. Toutes vos données (dépenses, budget, prêts) sont stockées uniquement en local sur votre appareil et ne sont jamais envoyées à un serveur externe.</p>
+      </div>
+      <div class="section">
+        <h2>2. Utilisation des données</h2>
+        <p>Les données que vous saisissez dans l'application sont utilisées uniquement pour afficher vos statistiques et dépenses. Nous ne partageons vos données avec aucun tiers, en aucune circonstance.</p>
+      </div>
+      <div class="section">
+        <h2>3. Permissions</h2>
+        <p>L'application ne demande aucune permission sensible telle que la localisation, la caméra, les contacts ou le microphone.</p>
+      </div>
+      <div class="section">
+        <h2>4. Sécurité</h2>
+        <p>Étant donné que toutes les données sont stockées localement sur votre appareil, vous êtes seul responsable de leur protection. Nous vous recommandons d'activer le verrouillage d'écran sur votre appareil.</p>
+      </div>
+      <div class="section">
+        <h2>5. Mises à jour</h2>
+        <p>Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Vous serez informé de tout changement via l'application.</p>
+      </div>
+      <div class="section">
+        <h2>6. Nous contacter</h2>
+        <p>Pour toute question concernant la confidentialité, contactez-nous à : <a href="mailto:contact@spently.app" style="color:#1a7a6e;">contact@spently.app</a></p>
+      </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="content-en">
+      <span class="badge">🇬🇧 English</span>
+      <div class="section">
+        <h2>1. Data Collection</h2>
+        <p>Spently does not collect any personal data. All your data (expenses, budget, loans) is stored locally on your device only and is never sent to any external server.</p>
+      </div>
+      <div class="section">
+        <h2>2. Data Usage</h2>
+        <p>The data you enter in the app is used only to display your statistics and expenses within the app. We do not share your data with any third party under any circumstances.</p>
+      </div>
+      <div class="section">
+        <h2>3. Permissions</h2>
+        <p>The app does not request any sensitive permissions such as location, camera, contacts, or microphone.</p>
+      </div>
+      <div class="section">
+        <h2>4. Security</h2>
+        <p>Since all data is stored locally on your device, you are solely responsible for its protection. We recommend enabling screen lock on your device.</p>
+      </div>
+      <div class="section">
+        <h2>5. Updates</h2>
+        <p>We may update this privacy policy from time to time. You will be notified of any changes through the app.</p>
+      </div>
+      <div class="section">
+        <h2>6. Contact Us</h2>
+        <p>For any privacy-related questions, contact us at: <a href="mailto:contact@spently.app" style="color:#1a7a6e;">contact@spently.app</a></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2026 Spently. All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      // Hide all
+      document.querySelectorAll('.content-ar, .content-fr, .content-en').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-switcher button').forEach(btn => btn.classList.remove('active'));
+
+      // Show selected
+      document.querySelector('.content-' + lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+
+      // Update header
+      const titles = { ar: 'سياسة الخصوصية', fr: 'Politique de Confidentialité', en: 'Privacy Policy' };
+      const subs = { ar: 'Spently – آخر تحديث: فبراير 2026', fr: 'Spently – Dernière mise à jour : Février 2026', en: 'Spently – Last updated: February 2026' };
+      document.getElementById('header-title').textContent = titles[lang];
+      document.getElementById('header-sub').textContent = subs[lang];
+
+      // Fix RTL/LTR for html tag
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
+  </script>
+
 </body>
 </html>
